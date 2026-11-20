@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Segera Dibuka | Pemilihan OSIS 2026/2027</title>
+<meta name="description" content="Website pemilihan Ketua dan Wakil Ketua OSIS SMK Bhakti Praja Margasari 2026/2027 akan dibuka Sabtu, 21 November 2026 pukul 13.00 WIB.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="https://xifzhkrvmvcudsmdjhhw.supabase.co/storage/v1/object/public/site-assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #d6e6ff;
+    --surface: #e6f0ff;
+    --ink: #14306b;
+    --ink-soft: #46639f;
+    --blue: #5b9bff;
+    --blue-deep: #2f6fe4;
+    --peach: #8fbaff;
+    --mint: #b9d6ff;
+    --sky: #c4dcff;
+    --shadow-dark: rgba(40, 90, 200, .36);
+    --shadow-light: rgba(255, 255, 255, .95);
+    --font-head: "Baloo 2", "Trebuchet MS", system-ui, sans-serif;
+    --font-body: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1f45;
+      --surface: #17295a;
+      --ink: #eaf2ff;
+      --ink-soft: #9fbdf0;
+      --blue: #6fa8ff;
+      --blue-deep: #6fa8ff;
+      --shadow-dark: rgba(3, 8, 28, .65);
+      --shadow-light: rgba(100, 150, 255, .2);
+    }
+  }
+
+  * { box-sizing: border-box; margin: 0; }
+  html, body { overscroll-behavior: none; touch-action: pan-y; -webkit-text-size-adjust: 100%; }
+  body, body * {
+    -webkit-user-select: none; user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  img { pointer-events: none; -webkit-user-drag: none; user-drag: none; }
+  html, body { min-height: 100%; }
+  body {
+    font-family: var(--font-body);
+    color: var(--ink);
+    background: var(--bg);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  .card {
+    position: relative;
+    z-index: 1;
+    width: min(580px, 100%);
+    background: var(--surface);
+    border-radius: 44px;
+    padding: 36px 28px 30px;
+    text-align: center;
+    box-shadow:
+      24px 30px 60px var(--shadow-dark),
+      -16px -16px 40px var(--shadow-light),
+      inset -8px -10px 20px rgba(40, 90, 200, .12),
+      inset 8px 10px 20px rgba(255, 255, 255, .7);
+  }
+
+  .logos { display: flex; justify-content: center; align-items: center; gap: 14px; margin-bottom: 20px; }
+  .logo {
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    background: var(--surface);
+    display: grid; place-items: center;
+    padding: 15px;
+    box-shadow:
+      10px 14px 24px var(--shadow-dark),
+      -8px -8px 18px var(--shadow-light),
+      inset -5px -6px 12px rgba(40, 90, 200, .14),
+      inset 5px 6px 12px rgba(255, 255, 255, .8);
+    animation: float 4s ease-in-out infinite;
+  }
+  .logo:nth-child(3) { animation-delay: -2s; }
+  .logo img { width: 100%; height: 100%; object-fit: contain; }
+  .plus {
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--peach);
+    box-shadow: 4px 5px 8px var(--shadow-dark), inset 2px 2px 4px rgba(255,255,255,.7);
+  }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+  .badge {
+    display: inline-flex; align-items: center; gap: 9px;
+    font-family: var(--font-head); font-weight: 600; font-size: .95rem;
+    color: #123a85;
+    background: var(--sky);
+    padding: 7px 18px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+    box-shadow:
+      6px 8px 14px var(--shadow-dark),
+      -5px -5px 12px var(--shadow-light),
+      inset -3px -4px 8px rgba(0,0,0,.08),
+      inset 3px 4px 8px rgba(255,255,255,.7);
+  }
+  .badge i {
+    width: 9px; height: 9px; border-radius: 50%;
+    background: var(--blue-deep);
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
+
+  h1 {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: clamp(1.55rem, 5.2vw, 2.1rem);
+    line-height: 1.15;
+    margin-bottom: 10px;
+  }
+  .sub {
+    color: var(--ink-soft);
+    font-weight: 700;
+    line-height: 1.55;
+    max-width: 44ch;
+    margin: 0 auto 24px;
+  }
+
+  .clock {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+  .tile {
+    background: var(--surface);
+    border-radius: 26px;
+    padding: 14px 4px 11px;
+    box-shadow:
+      8px 10px 18px var(--shadow-dark),
+      -6px -6px 14px var(--shadow-light),
+      inset -4px -5px 10px rgba(40, 90, 200, .14),
+      inset 4px 5px 10px rgba(255, 255, 255, .8);
+  }
+  .tile b {
+    display: block;
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: clamp(1.8rem, 8vw, 2.6rem);
+    line-height: 1;
+    color: var(--blue-deep);
+    font-variant-numeric: tabular-nums;
+  }
+  .tile span { display: block; margin-top: 6px; font-size: .82rem; font-weight: 700; color: var(--ink-soft); }
+
+  .when {
+    display: inline-block;
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 22px;
+    border-radius: 999px;
+    background: var(--surface);
+    box-shadow:
+      inset 4px 5px 10px rgba(40, 90, 200, .22),
+      inset -4px -5px 10px var(--shadow-light);
+  }
+
+  .note { margin-top: 20px; font-size: .88rem; font-weight: 700; color: var(--ink-soft); line-height: 1.5; }
+
+  /* keadaan setelah dibuka */
+  .open-view { display: none; }
+  body.is-open .wait-view { display: none; }
+  body.is-open .open-view { display: block; }
+
+  .btn {
+    font: 800 1rem var(--font-head);
+    border: 0; cursor: pointer;
+    padding: 14px 30px;
+    border-radius: 999px;
+    color: #fff;
+    background: linear-gradient(180deg, #7db4ff, #2f6fe4);
+    box-shadow:
+      8px 10px 18px var(--shadow-dark),
+      -5px -5px 12px var(--shadow-light),
+      inset -3px -4px 8px rgba(0, 0, 0, .18),
+      inset 3px 4px 8px rgba(255, 255, 255, .45);
+    transition: transform .15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn:active { transform: translateY(1px); box-shadow: inset 5px 6px 12px rgba(0,0,0,.22), inset -4px -4px 10px rgba(255,255,255,.25); }
+  .btn:focus-visible { outline: 3px solid var(--blue-deep); outline-offset: 3px; }
+
+  @media (max-width: 420px) {
+    .card { padding: 30px 16px 24px; border-radius: 36px; }
+    .logo { width: 84px; height: 84px; padding: 12px; }
+    .clock { gap: 8px; }
+    .tile { border-radius: 20px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .logo, .badge i { animation: none; }
+    .btn { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+  <main class="card">
+    <div class="logos">
+      <div class="logo">
+        <img draggable="false" src="https://xifzhkrvmvcudsmdjhhw.supabase.co/storage/v1/object/public/site-assets/logo.png" alt="Logo SMK Bhakti Praja Margasari" onerror="this.style.display='none'">
+      </div>
+      <span class="plus" aria-hidden="true"></span>
+      <div class="logo">
+        <img draggable="false" src="https://xifzhkrvmvcudsmdjhhw.supabase.co/storage/v1/object/public/site-assets/icon.png" alt="Logo OSIS" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <!-- Tampilan sebelum waktu pembukaan -->
+    <section class="wait-view">
+      <div class="badge"><i aria-hidden="true"></i>Sedang dalam pengembangan</div>
+      <h1>Website Pemilihan OSIS 2026/2027 Segera Dibuka</h1>
+      <p class="sub">Panitia masih menyiapkan website pemilihan Ketua dan Wakil Ketua OSIS SMK Bhakti Praja Margasari. Halaman ini akan terbuka otomatis saat waktunya tiba.</p>
+
+      <div class="clock" role="timer" aria-label="Hitung mundur pembukaan website">
+        <div class="tile"><b id="d">00</b><span>Hari</span></div>
+        <div class="tile"><b id="h">00</b><span>Jam</span></div>
+        <div class="tile"><b id="m">00</b><span>Menit</span></div>
+        <div class="tile"><b id="s">00</b><span>Detik</span></div>
+      </div>
+
+      <p class="when">Sabtu, 21 November 2026, pukul 13.00 WIB</p>
+      <p class="note">Tidak perlu menyegarkan halaman. Biarkan halaman ini tetap terbuka.</p>
+    </section>
+
+    <!-- Tampilan setelah waktu pembukaan -->
+    <section class="open-view">
+      <div class="badge"><i aria-hidden="true"></i>Sudah dibuka</div>
+      <h1>Website Pemilihan OSIS Sudah Dibuka</h1>
+      <p class="sub" id="openMsg" role="status" aria-live="polite">Kamu akan diarahkan ke website pemilihan dalam beberapa detik.</p>
+      <button class="btn" id="go" type="button">Buka sekarang</button>
+    </section>
+  </main>
+
+<script>
+(function () {
+  var stop = function (e) { e.preventDefault(); };
+  ["contextmenu", "selectstart", "dragstart", "copy", "cut", "gesturestart", "gesturechange", "gestureend"]
+    .forEach(function (t) { document.addEventListener(t, stop, { passive: false }); });
+
+  // Blokir pinch zoom dan zoom lewat Ctrl + scroll
+  document.addEventListener("touchstart", function (e) { if (e.touches.length > 1) e.preventDefault(); }, { passive: false });
+  document.addEventListener("touchmove", function (e) { if (e.touches.length > 1 || (e.scale && e.scale !== 1)) e.preventDefault(); }, { passive: false });
+  document.addEventListener("wheel", function (e) { if (e.ctrlKey) e.preventDefault(); }, { passive: false });
+
+  // Blokir pintasan inspeksi, lihat sumber, simpan, cetak, pilih semua, dan zoom
+  document.addEventListener("keydown", function (e) {
+    var c = e.code, meta = e.ctrlKey || e.metaKey;
+    var blocked =
+      c === "F12" ||
+      (meta && e.shiftKey && ["KeyI", "KeyJ", "KeyC", "KeyK", "KeyE", "KeyM", "KeyP"].indexOf(c) > -1) ||
+      (meta && ["KeyU", "KeyS", "KeyP", "KeyA"].indexOf(c) > -1) ||
+      (e.metaKey && e.altKey && ["KeyI", "KeyJ", "KeyC", "KeyU"].indexOf(c) > -1) ||
+      (meta && ["Equal", "Minus", "Digit0", "NumpadAdd", "NumpadSubtract", "Numpad0"].indexOf(c) > -1);
+    if (blocked) { e.preventDefault(); e.stopPropagation(); }
+  }, true);
+})();
+</script>
+<script>
+(function () {
+  // Waktu pembukaan: Sabtu, 21 November 2026, 13.00 WIB (UTC+7)
+  var OPEN_AT = new Date("2026-11-21T13:00:00+07:00").getTime();
+  var DELAY_AFTER_OPEN = 3; // detik jeda sebelum dialihkan
+
+  // Tujuan disusun dari potongan agar tidak tampil di halaman
+  var base = ["https", "://", "osisbhapama", ".web", ".id"].join("");
+  function destination() {
+    var p = location.pathname + location.search + location.hash;
+    return base + (p === "/" ? "/" : p);
+  }
+
+  var el = {
+    d: document.getElementById("d"),
+    h: document.getElementById("h"),
+    m: document.getElementById("m"),
+    s: document.getElementById("s"),
+    msg: document.getElementById("openMsg"),
+    go: document.getElementById("go")
+  };
+
+  // Selisih jam perangkat dengan jam server, supaya mengubah jam HP/PC tidak bisa membuka lebih awal
+  var offset = 0;
+  function now() { return Date.now() + offset; }
+
+  function two(n) { return n < 10 ? "0" + n : String(n); }
+
+  var redirected = false;
+  function redirect() {
+    if (redirected) return;
+    redirected = true;
+    location.replace(destination());
+  }
+
+  var opened = false;
+  function showOpen() {
+    if (opened) return;
+    opened = true;
+    document.body.classList.add("is-open");
+    document.title = "Sudah Dibuka | Pemilihan OSIS 2026/2027";
+    var left = DELAY_AFTER_OPEN;
+    el.msg.textContent = "Kamu akan diarahkan dalam " + left + " detik.";
+    var t = setInterval(function () {
+      left--;
+      if (left <= 0) { clearInterval(t); el.msg.textContent = "Membuka website..."; redirect(); }
+      else el.msg.textContent = "Kamu akan diarahkan dalam " + left + " detik.";
+    }, 1000);
+  }
+
+  function tick() {
+    var diff = OPEN_AT - now();
+    if (diff <= 0) { showOpen(); return; }
+    var sec = Math.floor(diff / 1000);
+    el.d.textContent = two(Math.floor(sec / 86400));
+    el.h.textContent = two(Math.floor(sec % 86400 / 3600));
+    el.m.textContent = two(Math.floor(sec % 3600 / 60));
+    el.s.textContent = two(sec % 60);
+  }
+
+  el.go.addEventListener("click", function () {
+    if (now() >= OPEN_AT) redirect();
+  });
+
+  function start() {
+    tick();
+    setInterval(tick, 500);
+  }
+
+  // Ambil jam server dari header Date halaman ini sendiri; jika gagal, pakai jam perangkat
+  try {
+    var t0 = Date.now();
+    fetch(location.pathname, { method: "HEAD", cache: "no-store" })
+      .then(function (r) {
+        var h = r.headers.get("Date");
+        if (h) {
+          var t1 = Date.now();
+          offset = new Date(h).getTime() - (t0 + t1) / 2;
+        }
+      })
+      .catch(function () {})
+      .then(start);
+  } catch (e) { start(); }
+})();
+</script>
+</body>
+</html>
